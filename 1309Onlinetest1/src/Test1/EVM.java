@@ -2,6 +2,6 @@ package Test1;
 
 public interface EVM {
 
-void enablePolling(Boolean isStatus);
+public Boolean enablePolling(Boolean isStatus);
 void On(Boolean isReady);	
 }

@@ -9,14 +9,19 @@ public class CU implements EVM {
 	
 	 Boolean isReady,isEnable,isBusy;
 	@Override
-	public void enablePolling(Boolean isReady) {
+	public Boolean enablePolling(Boolean isReady) {
+	
 		if(isReady){
 			isEnable=true;
+			System.out.println("status of enability is "+ isEnable);
 			isBusy=true;
 			b.enablePolling(isBusy);
 			System.out.println("Done");
 			tb.press(0);
+			isEnable=false;
+			System.out.println("status of enability is "+ isEnable);
 	}
+		return isEnable;
 	}
 	
 	public Boolean getIsReady() {
@@ -34,9 +39,11 @@ public class CU implements EVM {
 		}
 		
 	}
-	public void checkTotal(){
+	public int checkTotal(){
 		soFarPolls=soFarPolls+1;
 		d.show(soFarPolls);
+		
+		return soFarPolls;
 	}
 	
 	
