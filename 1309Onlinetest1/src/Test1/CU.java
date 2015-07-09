@@ -1,20 +1,32 @@
 package Test1;
 
 public class CU implements EVM {
-	BU b;
-	Boolean isReady;
+	BU b=new BU();
+	 Boolean isReady,isEnable,isBusy;
 	@Override
 	public void enablePolling(Boolean isReady) {
 		if(isReady){
-			b=new BU();
-			b.enablePolling(isReady);
+		
+			isEnable=true;
+			isBusy=true;
+			b.enablePolling(isBusy);
+			System.out.println("Done");
 		}
 	}
+	
 	public Boolean getIsReady() {
 		return isReady;
 	}
 	public void setIsReady(Boolean isReady) {
 		this.isReady = isReady;
+	}
+
+	@Override
+	public void On(Boolean isReady) {
+		if(isReady){
+	     b.On(true);
+		}
+		
 	}
 
 }
