@@ -2,11 +2,13 @@ package Test1;
 
 public class BU implements EVM{
 Lamp ready;
+CandidateButton cb=new CandidateButton();
 	@Override
 	public void enablePolling(Boolean isBusy) {
 		ready=new BusyLamp();
 		ready.on();
 		System.out.println("You can vote now!!");
+		cb.press(3);
 		isBusy=false;
 		ready.off();
 	}
