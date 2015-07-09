@@ -2,6 +2,7 @@ package Test1;
 
 public class CU implements EVM {
 	BU b=new BU();
+	OnLamp ol=new OnLamp();
 	 Boolean isReady,isEnable,isBusy;
 	@Override
 	public void enablePolling(Boolean isReady) {
@@ -24,6 +25,7 @@ public class CU implements EVM {
 	@Override
 	public void On(Boolean isReady) {
 		if(isReady){
+		 ol.on();
 	     b.On(true);
 		}
 		

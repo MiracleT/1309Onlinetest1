@@ -4,8 +4,11 @@ public class BU implements EVM{
 Lamp ready;
 	@Override
 	public void enablePolling(Boolean isBusy) {
+		ready=new BusyLamp();
+		ready.on();
 		System.out.println("You can vote now!!");
 		isBusy=false;
+		ready.off();
 	}
 
 	@Override

@@ -4,7 +4,7 @@ public class ReadyLamp extends Lamp{
 
 	@Override
 	public void on() {
-		System.out.println("RED LIGHT!The unit is switched on");
+		System.out.println("RED LIGHT!The BU unit is switched on");
 		
 	}
 
