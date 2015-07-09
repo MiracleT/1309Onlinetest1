@@ -7,7 +7,7 @@ CandidateLamp cl=new CandidateLamp();
 void press(int id) {
 	cs.c.setTotal(cs.c.getTotal()+1);
 	cl.on();
-	System.out.println("You voted for "+ cs.c.getSymbol() );
+	System.out.println("You voted for abc" );
 	cl.off();
 }
 }
